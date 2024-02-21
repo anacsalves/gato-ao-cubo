@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+  
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('../../public/fonts/Bebas\ Neue\ Regular.ttf') format('truetype');
+  }
+
+    
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../../public/fonts/Poppins\ Regular.ttf') format('truetype');
+  }

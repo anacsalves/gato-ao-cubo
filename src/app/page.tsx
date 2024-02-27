@@ -1,4 +1,42 @@
+'use client'
+
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Home() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function sendEmail(e: any) {
+    e.preventDefault();
+
+    if(name === '' || email === '' || message === ''){
+      alert("Preencha todos os campos");
+    } else {
+      alert("Email enviado!")
+    }
+
+    const templateParams = {
+      from_name: name,
+      email: email,
+      message: message
+    }
+
+    emailjs.send("service_f97nsk2", "template_yefo9av", templateParams, "CXavmcc4Rf92soF5z")
+    .then((response) => {
+      console.log("Email enviado!", response.status, response.text)
+      setName('')
+      setMessage('')
+      setEmail('')
+    })
+    .catch((error) => {
+      console.error("Erro ao enviar email:", error);
+      alert("Erro ao enviar email. Por favor, tente novamente mais tarde.");
+    });
+  }
+  
+
   return (
     <>
       <section
@@ -166,6 +204,76 @@ export default function Home() {
               <p className="text-center">Cubo Megaminx</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="contato"
+        className="font-poppins text-justify px-9 py-12 md:px-20 md:py-20 text-base md:text-xl lg:px-56 bg-pink-light text-white"
+      >
+        <div className="mb-6 md:mb-12">
+          <hr className="w-[10rem] md:w-[20rem] border-t-4 border-white rounded-full"></hr>
+          <h2 className="font-bebas text-4xl md:text-5xl text-white">
+            CONTATO
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-6 md:gap-12">
+          <div>
+            <p className="text-black">Comente o que achou do nosso site:</p>
+          </div>
+
+          <form className="form" onSubmit={sendEmail}>
+            <div className="mb-6 md:mb-12">
+              <label htmlFor="nome" className="block mb-2">
+                <p>Nome:</p>
+              </label>
+              <input
+                required
+                type="text"
+                id="nome"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                className="w-full py-0 md:px-4 md:py-2 text-black rounded-lg focus:outline-none"
+              />
+            </div>
+            <div className="mb-6 md:mb-12">
+              <label htmlFor="email" className="block mb-2">
+                <p>E-mail:</p>
+              </label>
+              <input
+                required
+                type="email"
+                id="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                className="w-full py-0 md:px-4 md:py-2 text-black rounded-lg focus:outline-none"
+              />
+            </div>
+            <div className="mb-2 md:mb-6">
+              <label
+                htmlFor="comentario"
+                className="block mb-2 focus:outline-none"
+              >
+                <p>Comentário:</p>
+              </label>
+              <textarea
+                required
+                id="comentario"
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+                className="w-full px-4 py-2 h-36 md:h-56 text-black rounded-lg focus:outline-none"
+              />
+            </div>
+
+            <button
+              className="w-full px-3 py-2 rounded-lg bg-pink-dark hover:scale-95 transition-all focus:outline-none"
+              type="submit"
+              value="Enviar"
+            >
+              Enviar
+            </button>
+          </form>
         </div>
       </section>
     </>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Modal = () => {
+const ModalAna = () => {
   const [isShown, setIsShown]= useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +40,7 @@ const Modal = () => {
         </div>
 
         {isShown &&(
-        <div className="flex font-poppins gap-12 w-2/3 text-lg px-12 py-2 rounded-3xl bg-pink-dark relative">
+        <div className="flex font-poppins gap-12 w-2/3 text-lg px-12 py-2 rounded-full bg-pink-dark relative">
           {/* Modal */}
                 
                 <div>
@@ -59,4 +59,4 @@ const Modal = () => {
 
 };
 
-export default Modal;
+export default ModalAna;

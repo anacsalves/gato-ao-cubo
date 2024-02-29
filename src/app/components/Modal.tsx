@@ -1,31 +1,37 @@
 import React, { useState } from "react";
 
-const Modal = () => {
-  const [isShown, setIsShown]= useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+interface ModalProps {
+  img: string,
+  alt: string,
+  gato: string,
+  descricao: string,
+}
 
+const Modal : React.FC<ModalProps> = ({ img, alt, gato, descricao }) => {
+  const [isShown, setIsShown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
     setIsShown(!isShown);
     setIsOpen(!isOpen);
-
   };
 
   return (
-    <div className="flex text-white gap-10">
+    <div className="flex flex-col md:flex-row text-white gap-9">
       <div>
         {/* Imagem */}
         <picture>
           <img
-            src="/img/gato-laranja.png"
-            alt="Imagem de um gato laranja"
-            className="w-[14rem] h-[14rem] object-cover rounded-lg"
+            src={img}
+            alt={alt}
+            className="w-full h-full md:w-[12rem] md:h-[12rem] object-cover rounded-lg"
           />
         </picture>
       </div>
 
-        <div className="flex font-bebas gap-12 h-20 w-1/2 text-3xl px-12 py-2 rounded-full bg-pink-dark relative">
-          <h2>Gato Laranja</h2>
+      <div className="flex flex-col gap-2">
+        <div className="flex justify-between items-center w-full md:w-64 px-6 py-1 rounded-3xl bg-pink-dark">
+          <h2 className="font-bebas text-3xl">{gato}</h2>
           <picture onClick={toggleModal}>
             <img
               src={
@@ -33,30 +39,27 @@ const Modal = () => {
                   ? "././icon/icon-seta-para-cima.png"
                   : "././icon/icon-seta-para-baixo.png"
               }
-              alt="Imagem de uma seta "
-              className="w-9 h-9 cursor-pointer  "
+              alt="Imagem de uma seta"
+              className="w-9 h-9 cursor-pointer"
             />
           </picture>
         </div>
 
-        {isShown &&(
-        <div className="flex font-poppins gap-12 w-2/3 text-lg px-12 py-2 rounded-3xl bg-pink-dark relative">
-          {/* Modal */}
-                
-                <div>
-                  <p>
-                    Frequentemente são associados à energia e à vitalidade. Eles
-                    tendem a ser extrovertidos, sociáveis e cheios de
-                    curiosidade, prontos para explorar o mundo ao seu redor com
-                    uma atitude otimista e brincalhona.
-                  </p>
-                </div>
-                </div>
-            )}
-</div>
-
-    );
-
+        <div className="flex">
+          {isShown && (
+            <div className="flex items-center w-full h-full md:w-[30rem] md:h-[9rem] px-6 py-2 rounded-3xl bg-pink-dark relative">
+              {/* Modal */}
+              <div>
+                <p className="font-poppins text-sm md:text-base">
+                  {descricao}
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Modal;

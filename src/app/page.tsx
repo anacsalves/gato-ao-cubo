@@ -1,7 +1,8 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Modal from "./components/Modal";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -11,31 +12,36 @@ export default function Home() {
   function sendEmail(e: any) {
     e.preventDefault();
 
-    if(name === '' || email === '' || message === ''){
+    if (name === "" || email === "" || message === "") {
       alert("Preencha todos os campos");
     } else {
-      alert("Email enviado!")
+      alert("Email enviado!");
     }
 
     const templateParams = {
       from_name: name,
       email: email,
-      message: message
-    }
+      message: message,
+    };
 
-    emailjs.send("service_f97nsk2", "template_yefo9av", templateParams, "CXavmcc4Rf92soF5z")
-    .then((response) => {
-      console.log("Email enviado!", response.status, response.text)
-      setName('')
-      setMessage('')
-      setEmail('')
-    })
-    .catch((error) => {
-      console.error("Erro ao enviar email:", error);
-      alert("Erro ao enviar email. Por favor, tente novamente mais tarde.");
-    });
+    emailjs
+      .send(
+        "service_f97nsk2",
+        "template_yefo9av",
+        templateParams,
+        "CXavmcc4Rf92soF5z"
+      )
+      .then((response) => {
+        console.log("Email enviado!", response.status, response.text);
+        setName("");
+        setMessage("");
+        setEmail("");
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar email:", error);
+        alert("Erro ao enviar email. Por favor, tente novamente mais tarde.");
+      });
   }
-  
 
   return (
     <>
@@ -120,6 +126,54 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="gatos"
+        className="font-poppins py-12 md:py-20 text-justify bg-pink-light text-black"
+      >
+        <div className="px-9 md:px-20 lg:px-56 text-sm md:text-base ">
+          <div className="mb-6 md:mb-12">
+            <hr className="w-[10rem] md:w-[20rem] border-t-4 border-white rounded-full"></hr>
+            <h2 className="font-bebas text-4xl md:text-5xl text-white">GATOS</h2>
+          </div>
+          <div className="md:flex md:gap-20">
+            <div className="flex flex-col mb-12">
+              <p>
+                Em "Gato ao Cubo", mergulhamos na fascinante{" "}
+                <strong>
+                  relação entre as cores dos gatos e suas personalidades
+                  vibrantes.
+                </strong>{" "}
+                Acreditamos que as nuances das cores felinas não são apenas
+                esteticamente atraentes, mas também podem revelar muito sobre os
+                traços e temperamentos únicos de cada felino.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-9 md:px-0 flex-col items-center gap-20">
+          <Modal
+            img="./img/gato-laranja.png"
+            alt="Imagem de um gato laranja"
+            gato="GATO LARANJA"
+            descricao="Frequentemente são associados à energia e à vitalidade. Eles tendem a ser extrovertidos, sociáveis e cheios de curiosidade, prontos para explorar o mundo ao seu redor com uma atitude otimista e brincalhona."
+          />
+          <Modal
+            img="./img/gato-branco.png"
+            alt="Imagem de um gato branco"
+            gato="GATO BRANCO"
+            descricao="Os gatos brancos, com sua pureza e elegância, muitas vezes emanam uma sensação de calma e tranquilidade. São geralmente gentis, amorosos e tolerantes, revelando-se como companheiros carinhosos e protetores para suas famílias humanas."
+          />
+
+          <Modal
+            img="./img/gato-preto.png"
+            alt="Imagem de um gato preto"
+            gato="GATO PRETO"
+            descricao="Frequentemente envoltos em mitos e superstição, são na verdade criaturas cheias de personalidade e charme. São frequentemente descritos como independentes e misteriosos, com uma atitude confiante e decidida que os torna verdadeiros líderes em seu ambiente."
+          />
         </div>
       </section>
 

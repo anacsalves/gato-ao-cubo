@@ -1,5 +1,7 @@
 # Gato ao Cubo
-![Gato ao Cubo](./public/img/logo.png)
+<div style="text-align:center">
+  <img src="./public/gifs/gif-site-desktop.png" alt="Gato ao Cubo - Desktop">
+</div>
 
 Nosso site une o melhor de duas coisas aparentemente muito distintas: gatos e cubos!
 
@@ -31,12 +33,12 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o 
 
 Você pode editar a página modificando o arquivo `app/page.tsx`. A página é atualizada automaticamente conforme você edita o arquivo 
 
-## Abas 
+## Seções
 
-Além de um header com um menu clicável, e um footer com links sobre nós, temos diversas abas. Confira-as agora:
+Além de um header com um menu clicável, e um footer com links sobre nós, temos diversas seções. Confira-as agora:
 
 ### Sobre
-Nessa aba, buscamos explicar melhor o objetivo do nosso site, além de nos apresentar. 
+Nessa seção, buscamos explicar melhor o objetivo do nosso site, além de nos apresentar. 
 
 ### Gatos
 
@@ -44,11 +46,22 @@ Aqui, trazemos alguns fatos interessantes sobre os bichanos, baseado em suas cor
 
 ### Cubos
 
-Já nesta aba, contamos um pouco da histótia do cubo mágico, e mostramos alguns exemplos de cubos.
+Já nesta seção, contamos um pouco da histótia do cubo mágico, e mostramos alguns exemplos de cubos.
 
 ### Contato
 
-Por fim, temos uma aba em que você pode nos dizer o que achou do site, na qual utilizamos o static forms para receber as respostas.
+Por fim, temos uma seção em que você pode nos dizer o que achou do site, na qual utilizamos o emailjs para receber as respostas.
+
+
+
+## Site Responsivo
+
+Nosso site, além do Desktop, também foi pensado para a versão Mobile!!
+
+<div style="text-align:center">
+  <img src="./public/gifs/gif-site-mobile.png" alt="Gato ao Cubo - Mobile">
+</div>
+
 
 ## Tecnologias usadas
 
@@ -64,10 +77,5 @@ Esse é um projeto [Next.js](https://nextjs.org/) inicializado com [`create-next
 
 * HTML
 
-*  Static forms
+* EmailJS
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

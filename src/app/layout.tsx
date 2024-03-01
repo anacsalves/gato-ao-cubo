@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="icon" href="/icon/icon-gato.png" />
+        <link rel="icon" href="/icon/icon-layout.png" />
       </head>
       <body className={inter.className}>
         <Header />

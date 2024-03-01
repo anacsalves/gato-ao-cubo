@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gato ao Cubo 😺🧊
+<div style="text-align:center">
+  <img src="./public/gifs/gif-site-desktop.gif" alt="Gato ao Cubo - Desktop">
+</div>
 
-## Getting Started
+Nosso site une o melhor de duas coisas aparentemente muito distintas: gatos e cubos!
 
-First, run the development server:
+Esse site foi feito para ser apresentado como projeto final do trainee da byron.solutions. Nele, aplicamos o que foi ensinado durante a capacitação criando um site responsivo e com a nossa cara!
+
+Desenvolvedoras:
+[Ana Clara Alves](https://github.com/anacsalves),
+[Victoria Shirley](https://github.com/victoriashirley)
+
+Gerente:
+[Pedro Barboza](https://github.com/pedronb10)
+
+## Como usar ⁉️
+Clique em **<>code**, depois **Download zip**. Extraia os arquivos e abra a pasta ou no VS Code.
+
+Então, execute o seguinte comando no terminal:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Você pode editar a página modificando o arquivo `app/page.tsx`. A página é atualizada automaticamente conforme você edita o arquivo 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Seções 🔍
 
-## Learn More
+Além de um header com um menu clicável, e um footer com links sobre nós, temos diversas seções. Confira-as agora:
 
-To learn more about Next.js, take a look at the following resources:
+### Sobre
+Nessa seção, buscamos explicar melhor o objetivo do nosso site, além de nos apresentar. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Gatos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Aqui, trazemos alguns fatos interessantes sobre os bichanos, baseado em suas cores.
 
-## Deploy on Vercel
+### Cubos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Já nesta seção, contamos um pouco da histótia do cubo mágico, e mostramos alguns exemplos de cubos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Contato
+
+Por fim, temos uma seção em que você pode nos dizer o que achou do site, na qual utilizamos o emailjs para receber as respostas.
+
+
+## Site Responsivo 🤳
+
+Nosso site, além do Desktop, também foi pensado para a versão Mobile!!
+
+<div style="text-align:center">
+  <img src="./public/gifs/gif-site-mobile.gif" alt="Gato ao Cubo - Mobile">
+</div>
+
+
+## Tecnologias usadas 👩‍💻
+
+* React
+
+* Next.js 14.1.0
+
+Esse é um projeto [Next.js](https://nextjs.org/) inicializado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+* Typescript
+
+* Tailwind
+
+* HTML
+
+* EmailJS
+

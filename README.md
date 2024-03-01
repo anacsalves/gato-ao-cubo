@@ -1,6 +1,6 @@
 # Gato ao Cubo
 <div style="text-align:center">
-  <img src="./public/gifs/gif-site-desktop.png" alt="Gato ao Cubo - Desktop">
+  <img src="./public/gifs/gif-site-desktop.gif alt="Gato ao Cubo - Desktop">
 </div>
 
 Nosso site une o melhor de duas coisas aparentemente muito distintas: gatos e cubos!
@@ -59,7 +59,7 @@ Por fim, temos uma seção em que você pode nos dizer o que achou do site, na q
 Nosso site, além do Desktop, também foi pensado para a versão Mobile!!
 
 <div style="text-align:center">
-  <img src="./public/gifs/gif-site-mobile.png" alt="Gato ao Cubo - Mobile">
+  <img src="./public/gifs/gif-site-mobile.gif" alt="Gato ao Cubo - Mobile">
 </div>
 
 

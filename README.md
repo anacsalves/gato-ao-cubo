@@ -1,6 +1,6 @@
-# Gato ao Cubo
+# Gato ao Cubo 😺🧊
 <div style="text-align:center">
-  <img src="./public/gifs/gif-site-desktop.gif alt="Gato ao Cubo - Desktop">
+  <img src="./public/gifs/gif-site-desktop.gif" alt="Gato ao Cubo - Desktop">
 </div>
 
 Nosso site une o melhor de duas coisas aparentemente muito distintas: gatos e cubos!
@@ -14,7 +14,7 @@ Desenvolvedoras:
 Gerente:
 [Pedro Barboza](https://github.com/pedronb10)
 
-## Como usar
+## Como usar ⁉️
 Clique em **<>code**, depois **Download zip**. Extraia os arquivos e abra a pasta ou no VS Code.
 
 Então, execute o seguinte comando no terminal:
@@ -33,7 +33,7 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o 
 
 Você pode editar a página modificando o arquivo `app/page.tsx`. A página é atualizada automaticamente conforme você edita o arquivo 
 
-## Seções
+## Seções 🔍
 
 Além de um header com um menu clicável, e um footer com links sobre nós, temos diversas seções. Confira-as agora:
 
@@ -53,8 +53,7 @@ Já nesta seção, contamos um pouco da histótia do cubo mágico, e mostramos a
 Por fim, temos uma seção em que você pode nos dizer o que achou do site, na qual utilizamos o emailjs para receber as respostas.
 
 
-
-## Site Responsivo
+## Site Responsivo 🤳
 
 Nosso site, além do Desktop, também foi pensado para a versão Mobile!!
 
@@ -63,7 +62,7 @@ Nosso site, além do Desktop, também foi pensado para a versão Mobile!!
 </div>
 
 
-## Tecnologias usadas
+## Tecnologias usadas 👩‍💻
 
 * React
 

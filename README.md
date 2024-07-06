@@ -5,6 +5,8 @@
 
 Nosso site une o melhor de duas coisas aparentemente muito distintas: gatos e cubos!
 
+Ele também está disponível em: [https://gato-ao-cubo.vercel.app/](https://gato-ao-cubo.vercel.app/).
+
 Esse site foi feito para ser apresentado como projeto final do trainee da byron.solutions. Nele, aplicamos o que foi ensinado durante a capacitação criando um site responsivo e com a nossa cara!
 
 Desenvolvedoras:
